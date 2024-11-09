@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Contenedor centrado para los inputs */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    text-align: center;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #333333;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+/* Estilo de resultados y historial */
+#resultado, #historial {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    width: 15%;
+    max-width: 400px;
+}
+
+/* Inicialmente ocultamos el resultado, pero mostramos el historial */
+#resultado {
+    display: none;
+}
+
+#historial {
+    display: block;
+    margin-top: 20px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #resultado, #historial {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #resultado, #historial {
+        font-size: 12px;
+    }
+}
