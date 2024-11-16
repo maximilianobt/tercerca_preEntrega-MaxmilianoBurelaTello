@@ -18,8 +18,18 @@
 
     <button id="calcular-btn">HAGA CLICK PARA CALCULAR</button>
 
+    <!-- Resultado -->
     <div id="resultado"></div>
-    <div id="historial"></div>
+
+    <!-- Historial con flechas para navegar -->
+    <div id="historial">
+        <h3>Historial:</h3>
+        <button id="prev" onclick="navegarHistorial(-1)">⬅️</button>
+        <div id="contenido-historial"></div>
+        <button id="next" onclick="navegarHistorial(1)">➡️</button>
+    </div>
+
+    <button id="limpiar-historial">Limpiar Historial</button>
 
     <script src="js/script.js"></script>
 </body>
