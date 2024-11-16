@@ -17,6 +17,7 @@ h1 {
     color: #ffffff;
     text-align: center;
     font-size: 28px;
+    font-size: 28px;
 }
 
 /* Contenedor centrado para los inputs */
@@ -25,19 +26,21 @@ h1 {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    width: 100%; /* Ancho adaptativo */
+    max-width: 300px;
 }
 
 input {
     padding: 10px;
     margin: 10px 0;
     width: 100%;
-    max-width: 300px;
     font-size: 16px;
     border: 1px solid #333333;
     border-radius: 5px;
     background-color: #1f1f1f;
     color: #ffffff;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Botón calcular */
@@ -59,9 +62,13 @@ button#calcular-btn:hover {
 
 /* Estilo de resultados */
 #resultado {
+/* Estilo de resultados */
+#resultado {
     margin-top: 20px;
     padding: 20px;
+    padding: 20px;
     background-color: #1f1f1f;
+    color: #C49634; /* Color de texto de los resultados */
     color: #C49634; /* Color de texto de los resultados */
     border-radius: 5px;
     text-align: left; /* Alineación de texto a la izquierda */
@@ -72,6 +79,7 @@ button#calcular-btn:hover {
     font-size: 16px;
 }
 
+/* Estilo de historial */
 /* Estilo de historial */
 #historial {
     margin-top: 20px;
@@ -158,6 +166,7 @@ button#limpiar-historial-btn:hover {
     button#calcular-btn {
         padding: 10px 20px;
         font-size: 14px;
+        font-size: 14px;
     }
 
     #resultado, #historial {
@@ -172,6 +181,7 @@ button#limpiar-historial-btn:hover {
 
     button#calcular-btn {
         padding: 8px 16px;
+        font-size: 12px;
         font-size: 12px;
     }
 
