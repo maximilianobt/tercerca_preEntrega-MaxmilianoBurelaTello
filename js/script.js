@@ -47,14 +47,9 @@ function generarResultadoHTML(resultados) {
         <p>Multiplicación: ${resultados.multiplicacion}</p>
         <p>División: ${resultados.division}</p>
     `;
-    mostrarResultado(resultadoHTML);
-
-    // Historial de cálculos en el DOM
-    actualizarHistorial();
-    mostrarResultado("<p>Historial limpiado.</p>");
 }
 
-// Función 
+// Función para mostrar el mensaje en el resultado
 function mostrarResultado(mensaje) {
     const resultadoDiv = document.getElementById("resultado");
     resultadoDiv.innerHTML = mensaje;
@@ -63,18 +58,27 @@ function mostrarResultado(mensaje) {
 
 // Función para actualizar y mostrar el historial de cálculos
 function actualizarHistorial() {
-    const historialDiv = document.getElementById("historial");
-    historialDiv.innerHTML = "<h3>Historial:</h3>";
-    historialCalculos.forEach(calc => {
-        historialDiv.innerHTML += `
-            <div>
-                <p><strong>Cálculo #${calc.id}:</strong></p>
-                <p>Suma: ${calc.suma}</p>
-                <p>Resta: ${calc.resta}</p>
-                <p>Multiplicación: ${calc.multiplicacion}</p>
-                <p>División: ${calc.division}</p>
-            </div>
-            <hr>
-        `;
-    });
+    const historialDiv = document.getElementById("contenido-historial");
+    const mensajeHistorial = document.getElementById("mensaje-historial");
+
+    // Si no hay cálculos, muestra el mensaje
+    if (historialCalculos.length === 0) {
+        mensajeHistorial.style.display = "block"; // Muestra el mensaje
+        historialDiv.innerHTML = ''; // Borra cualquier contenido previo
+    } else {
+        mensajeHistorial.style.display = "none"; // Oculta el mensaje
+        historialDiv.innerHTML = ''; // Limpia el contenido del historial
+        historialCalculos.forEach(calc => {
+            historialDiv.innerHTML += `
+                <div>
+                    <p><strong>Cálculo #${calc.id}:</strong></p>
+                    <p>Suma: ${calc.suma}</p>
+                    <p>Resta: ${calc.resta}</p>
+                    <p>Multiplicación: ${calc.multiplicacion}</p>
+                    <p>División: ${calc.division}</p>
+                </div>
+                <hr>
+            `;
+        });
+    }
 }
