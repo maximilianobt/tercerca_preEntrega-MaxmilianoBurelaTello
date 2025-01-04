@@ -8,37 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>CALCULADORA</h1>
+    <div class="container">
+        <h1>CALCULADORA</h1>
 
-    <!-- Contenedor de Inputs -->
-    <div class="input-container">
-        <input type="number" id="numero1" placeholder="Ingrese el primer número">
-        <input type="number" id="numero2" placeholder="Ingrese el segundo número">
-    </div>
-
-    <button id="calcular-btn">HAGA CLICK PARA CALCULAR</button>
-
-    <!-- Resultado -->
-    <div id="resultado"></div>
-
-    <!-- Operaciones disponibles -->
-    <div id="operaciones">
-        <h3>Operaciones disponibles:</h3>
-    </div>
-
-    <!-- Historial con flechas para navegar -->
-    <div id="historial">
-        <h3>Historial:</h3>
-        <button id="prev" onclick="navegarHistorial(-1)">⬅️</button>
-        <div id="contenido-historial">
-            <p id="mensaje-historial">No hay cálculos en el historial.</p>
+        <!-- Contenedor de Inputs -->
+        <div class="input-container">
+            <input type="number" id="numero1" placeholder="Ingrese el primer número">
+            <input type="number" id="numero2" placeholder="Ingrese el segundo número">
         </div>
-        <button id="next" onclick="navegarHistorial(1)">➡️</button>
-    </div>
 
-    <!-- Botón para limpiar historial -->
-    <div id="acciones-historial">
-        <button id="limpiar-historial-btn">Limpiar Historial</button>
+        <button id="calcular-btn">HAGA CLICK PARA CALCULAR</button>
+
+        <!-- Resultado -->
+        <div id="resultado"></div>
+
+        <!-- Operaciones disponibles -->
+        <div id="operaciones">
+            <h3>Operaciones disponibles:</h3>
+        </div>
+
+        <!-- Historial con flechas para navegar -->
+        <div id="historial">
+            <h3>Historial:</h3>
+            <button id="prev" onclick="navegarHistorial(-1)">⬅️</button>
+            <div id="contenido-historial">
+                <p id="mensaje-historial">No hay cálculos en el historial.</p>
+            </div>
+            <button id="next" onclick="navegarHistorial(1)">➡️</button>
+        </div>
+
+        <!-- Botón para limpiar historial -->
+        <div id="acciones-historial">
+            <button id="limpiar-historial-btn">Limpiar Historial</button>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
